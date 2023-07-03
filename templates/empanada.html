@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container" style="padding:20px">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for a in range (df1|length) %} 
+
+            
+            <tr>
+                <td>{{df1.iloc[a]["tipo"]}}</td>
+                <td>{{df1.iloc[a]["producto"]}}</td>
+                <td>{{df1.iloc[a]["precio"]}}</td>
+        
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+
+{% endblock %}
